@@ -1,12 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author LINA FORERO
- */
 public class Main {
+
+    public static void main(String[] args) {
     
+     Operations resultado = new Operations();
+     resultado.sumar(3,2);
+     System.out.println(resultado.r);
+     
+     resultado.restar(10,5);
+     System.out.println(resultado.r);
+     
+     resultado.multiplicar(2, 2);
+     System.out.println(resultado.r);
+     
+     resultado.potencia(2,4);
+     System.out.println(resultado.r);
+    }
 }
