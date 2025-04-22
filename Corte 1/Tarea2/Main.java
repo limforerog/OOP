@@ -1,17 +1,20 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Operations resultado = new Operations();
-
-        resultado.sumar(3, 2); //  la suma
-        System.out.println(resultado.getResultado()); // Obtener el resultado usando getResultado()
-
-        resultado.restar(10, 5); //  la resta
-        System.out.println(resultado.getResultado());
-
-        resultado.multiplicar(2, 2); // la multiplicacion
-        System.out.println(resultado.getResultado());
-
-        //resultado.potencia(2, 4); //  la potencia
-        //System.out.println(resultado.getResultado());
+        // Solicitar al usuario los números
+        try (Scanner scanner = new Scanner(System.in)) {
+            // Solicitar al usuario los números
+            System.out.print("Ingrese el primer número: ");
+            int numero1 = scanner.nextInt();
+            System.out.print("Ingrese el segundo número: ");
+            int numero2 = scanner.nextInt();
+            // Crear una instancia de Operations
+            Operations operacion = new Operations(numero1, numero2);
+            // Mostrar resultados utilizando los métodos
+            System.out.println("Suma: " + operacion.sumar());
+            System.out.println("Resta: " + operacion.restar());
+            System.out.println("Multiplicación: " + operacion.multiplicar());
+        }        
     }
 }
