@@ -1,12 +1,12 @@
 public class Operations {
-    private Data data; //cada objeto de Options tendra su copia de data
+    private Data data; // Options se almacena en data
     
-    //el construc
+    //Brindar constructores
     public Operations() {
         data = new Data(); // inicializo Data
     }
 
-    // metodos para las operaciones
+    // Operaciones
     public void sumar(int a, int b) {
         data.setResultado(a + b); // uso data para almacenar el resultado
     }
@@ -18,12 +18,11 @@ public class Operations {
     public void multiplicar(int a, int b) {
         data.setResultado(a * b);
     }
-//esta parte me presenta problemas, no se como reparlo.
    // public void potencia(int base, int exponente) {
        // data.setResultado((exponente == 0 ? 1 : base * potencia(base, exponente - 1));
    // }
 
-    // aqui lo que hago es retornar el resultado para poder manipularlo
+    // Resultado 
     public int getResultado() {
         return data.getResultado();
     }
