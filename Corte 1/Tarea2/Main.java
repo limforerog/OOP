@@ -1,20 +1,22 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        // Solicitar al usuario los números
         try (Scanner scanner = new Scanner(System.in)) {
-            // Solicitar al usuario los números
+            // Solicita el primer número al usuario
             System.out.print("Ingrese el primer número: ");
             int numero1 = scanner.nextInt();
+
+            // Solicita el segundo número al usuario
             System.out.print("Ingrese el segundo número: ");
             int numero2 = scanner.nextInt();
-            // Crear una instancia de Operations
+
+            // Crea una nueva operación con los números ingresados
             Operations operacion = new Operations(numero1, numero2);
-            // Mostrar resultados utilizando los métodos
+
+            // Muestra los resultados en pantalla
             System.out.println("Suma: " + operacion.sumar());
             System.out.println("Resta: " + operacion.restar());
             System.out.println("Multiplicación: " + operacion.multiplicar());
         }        
     }
 }
+
