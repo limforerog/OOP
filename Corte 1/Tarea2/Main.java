@@ -1,18 +1,22 @@
+import java.util.Scanner;
+
+// Clase principal del programa
 public class Main {
     public static void main(String[] args) {
+        // Usamos Scanner para leer los números que el usuario escriba
         try (Scanner scanner = new Scanner(System.in)) {
-            // Solicita el primer número al usuario
+            // Pedimos el primer número
             System.out.print("Ingrese el primer número: ");
             int numero1 = scanner.nextInt();
 
-            // Solicita el segundo número al usuario
+            // Pedimos el segundo número
             System.out.print("Ingrese el segundo número: ");
             int numero2 = scanner.nextInt();
 
-            // Crea una nueva operación con los números ingresados
+            // Creamos un objeto de la clase Operations y le pasamos los dos números
             Operations operacion = new Operations(numero1, numero2);
 
-            // Muestra los resultados en pantalla
+            // Mostramos los resultados de las operaciones matemáticas básicas
             System.out.println("Suma: " + operacion.sumar());
             System.out.println("Resta: " + operacion.restar());
             System.out.println("Multiplicación: " + operacion.multiplicar());
